@@ -1,0 +1,32 @@
+@import 'styles/_var';
+
+.container {
+  height: 76px;
+  background-color: $color-primary;
+}
+
+.body {
+  color: $color-white;
+  @include flex;
+  @include childrenNotLastChild {
+    margin-right: 60px;
+  }
+}
+
+.logo {
+  height: 36px;
+}
+
+.linkContainer {
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1 0;
+  @include flex;
+  @include childrenNotLastChild {
+    margin-right: 60px;
+  }
+}
+
+.cartContainer {
+  @include flex($justify: flex-end);
+}
