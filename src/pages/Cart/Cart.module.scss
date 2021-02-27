@@ -1,0 +1,95 @@
+@import 'styles/_var';
+
+.body {
+  padding: 20px;
+  background-color: #fcfcfc;
+  border-radius: 20px;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.table {
+  margin-bottom: 30px;
+
+  .header {
+    padding-bottom: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    @include flex;
+
+    .price,
+    .total {
+      color: #000000 !important;
+    }
+  }
+
+  .data {
+    height: 80px;
+  }
+
+  .row {
+    @include flex;
+    border-bottom: 1px solid #dedede;
+
+    .productName {
+      flex-grow: 1;
+      font-weight: 500;
+      @include flex($justify: flex-start);
+
+      .productImg {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .price,
+    .total {
+      width: 75px;
+      color: #a0a0a0;
+    }
+
+    .quantity {
+      width: 220px;
+    }
+
+    @include childrenNotFirstChild {
+      flex-shrink: 0;
+      @include flex;
+    }
+  }
+}
+
+.summary {
+  @include flex(column, flex-start, flex-end);
+
+  .subtotal {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    @include flex;
+
+    .totalPrice {
+      margin-left: 10px;
+      font-size: 28px;
+      color: $color-primary;
+    }
+  }
+
+  .checkOutButton {
+    width: 331px;
+    height: 48px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 10px;
+  }
+}

@@ -4,7 +4,7 @@ import { PageContainer } from 'components';
 import Logo from 'assets/images/logo.svg';
 import CartIcon from 'assets/images/cart-icon.svg';
 import { map } from 'lodash/fp';
-import { useCart } from 'hooks';
+import { useCartStore } from 'hooks';
 import styles from './Navbar.module.scss';
 
 const links = [
@@ -17,7 +17,7 @@ const links = [
 ];
 
 const Navbar: FC = () => {
-  const { quantity } = useCart();
+  const { quantity } = useCartStore();
   return (
     <PageContainer
       containerClassName={styles.container}
