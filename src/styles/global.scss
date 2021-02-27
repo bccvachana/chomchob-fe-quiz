@@ -1,10 +1,12 @@
 @import 'styles/_var';
 
 html {
+  height: 100%;
   font-family: Boon;
   font-size: 14px;
   line-height: (18/14);
   background-color: #f0f0f0;
+  color: #484848;
 
   * {
     margin: 0;
@@ -26,4 +28,17 @@ html {
   a {
     color: inherit;
   }
+}
+
+body {
+  min-height: 100%;
+  @include flex(column, flex-start);
+}
+
+#root {
+  width: 100%;
+  flex-grow: 1;
+  padding-top: $navbarHeight + 50px;
+  padding-bottom: $footerHeight + 101px;
+  position: relative;
 }

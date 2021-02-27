@@ -1,0 +1,15 @@
+@import 'styles/_var';
+
+.container {
+  height: $footerHeight;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #1a586a;
+}
+
+.body {
+  font-size: 12px;
+  color: $color-white;
+  @include flex;
+}

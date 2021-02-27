@@ -1,4 +1,7 @@
-import { ProductList } from 'pages';
+import {
+  ProductList,
+  ProductDetail,
+} from 'pages';
 
 export const routes = [
   {
@@ -7,7 +10,7 @@ export const routes = [
   },
   {
     path: '/product/:productId',
-    PageComponent: () => <div>/product/:productId</div>,
+    PageComponent: ProductDetail,
   },
   {
     path: '/cart',

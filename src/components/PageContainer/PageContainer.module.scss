@@ -1,8 +1,11 @@
 @import 'styles/_var';
 
+$pageHorizontalPadding: 22px;
+
 .container {
   width: 100%;
-  padding: 0 22px;
+  min-width: $pageMaxWidth + ($pageHorizontalPadding * 2);
+  padding: 0 $pageHorizontalPadding;
   @include flex(row, flex-start);
 }
 

@@ -1,6 +1,8 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import { PageContainer } from 'components';
-import LogoSvg from 'assets/images/logo.svg';
+import Logo from 'assets/images/logo.svg';
+import CartIcon from 'assets/images/cart-icon.svg';
 import { map } from 'lodash/fp';
 import styles from './Navbar.module.scss';
 
@@ -18,23 +20,34 @@ const Navbar: FC = () => (
     containerClassName={styles.container}
     bodyClassName={styles.body}
   >
-    <div>
+    <Link to="/product">
       <img
         className={styles.logo}
-        src={LogoSvg}
+        src={Logo}
         alt="logo"
       />
-    </div>
-    <div className={styles.linkContainer}>
+    </Link>
+    <div className={styles.link}>
       {map((link) => (
-        <a href="/">
+        <Link to="/product" key={link}>
           {link}
-        </a>
+        </Link>
       ), links)}
     </div>
-    <div className={styles.cartContainer}>
+    <Link
+      to="/cart"
+      className={styles.cart}
+    >
+      <div className={styles.iconBadge}>
+        <img
+          className={styles.icon}
+          src={CartIcon}
+          alt="cart-icon"
+        />
+        <div className={styles.badge}>0</div>
+      </div>
       Cart
-    </div>
+    </Link>
   </PageContainer>
 );
 

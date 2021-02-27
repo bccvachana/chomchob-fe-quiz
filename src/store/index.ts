@@ -1,15 +1,15 @@
 import { combineReducers, createStore } from 'redux';
-import { IProductStore } from './product/types';
-import { productReducer } from './product/reducer';
+import { ICartStore } from './cart/types';
+import { cartReducer } from './cart/reducer';
 
 export interface IRootStore {
-  product: IProductStore;
+  cart: ICartStore;
 }
 
-const store = createStore<IRootStore, any, any, any>(
+const stores = createStore<IRootStore, any, any, any>(
   combineReducers({
-    product: productReducer,
+    cart: cartReducer,
   }),
 );
 
-export default store;
+export default stores;

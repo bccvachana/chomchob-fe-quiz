@@ -2,6 +2,8 @@
 @import 'styles/_fonts';
 
 $pageMaxWidth: 1166px;
+$navbarHeight: 76px;
+$footerHeight: 54px;
 
 @mixin flex($direction: row, $justify: center, $align: center, $wrap: nowrap) {
   display: flex;

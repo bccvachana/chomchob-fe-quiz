@@ -1,7 +1,10 @@
 @import 'styles/_var';
 
 .container {
-  height: 76px;
+  height: $navbarHeight;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: $color-primary;
 }
 
@@ -17,7 +20,7 @@
   height: 36px;
 }
 
-.linkContainer {
+.link {
   font-size: 16px;
   font-weight: 500;
   flex: 1 0;
@@ -27,6 +30,28 @@
   }
 }
 
-.cartContainer {
-  @include flex($justify: flex-end);
+.cart {
+  @include flex;
+
+  .iconBadge {
+    margin-right: 9px;
+    position: relative;
+    @include flex;
+  }
+
+  .icon {
+    height: 24px;
+  }
+
+  .badge {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    right: -4px;
+    border-radius: 16px;
+    font-size: 12px;
+    @include flex;
+    background-color: #1a586a;
+  }
 }

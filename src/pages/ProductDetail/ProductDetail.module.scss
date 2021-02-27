@@ -1,0 +1,17 @@
+@import 'styles/_var';
+
+.body {
+  padding: 20px;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  @include flex(row, flex-start, flex-start);
+}
+
+.productImg {
+  width: 460px;
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}

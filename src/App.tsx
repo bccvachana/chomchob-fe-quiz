@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Navbar } from 'components';
+import { Footer, Navbar } from 'components';
 import { routes } from 'routes';
 import 'styles/global.scss';
 import { map } from 'lodash/fp';
 
 const App: FC = () => (
   <>
-    <Navbar />
     <Router>
+      <Navbar />
       <Switch>
         {map(({
           path,
@@ -23,6 +23,7 @@ const App: FC = () => (
           </Route>
         ), routes)}
       </Switch>
+      <Footer />
     </Router>
   </>
 );
