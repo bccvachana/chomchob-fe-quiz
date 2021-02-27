@@ -27,9 +27,6 @@ $productMargin: 11px;
 
   .productImg {
     height: 196px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     border-radius: 15px;
   }
 
@@ -42,9 +39,6 @@ $productMargin: 11px;
       height: 40px;
       margin-right: 10px;
       flex-shrink: 0;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
       border-radius: 10px;
     }
 
@@ -76,13 +70,6 @@ $productMargin: 11px;
 
         .rating {
           margin-top: 4px;
-          @include childrenNotLastChild {
-            margin-right: 1px;
-          }
-
-          .star {
-            height: 12px;
-          }
         }
       }
     }

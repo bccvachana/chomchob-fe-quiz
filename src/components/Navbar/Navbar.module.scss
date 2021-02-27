@@ -2,7 +2,7 @@
 
 .container {
   height: $navbarHeight;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: $color-primary;
@@ -10,7 +10,7 @@
 
 .body {
   color: $color-white;
-  @include flex;
+  @include flex($justify: space-between);
   @include childrenNotLastChild {
     margin-right: 60px;
   }
@@ -23,7 +23,6 @@
 .link {
   font-size: 16px;
   font-weight: 500;
-  flex: 1 0;
   @include flex;
   @include childrenNotLastChild {
     margin-right: 60px;

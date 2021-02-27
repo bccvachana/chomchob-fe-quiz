@@ -28,6 +28,10 @@ html {
   a {
     color: inherit;
   }
+
+  button {
+    cursor: pointer;
+  }
 }
 
 body {
@@ -37,8 +41,9 @@ body {
 
 #root {
   width: 100%;
-  flex-grow: 1;
   padding-top: $navbarHeight + 50px;
   padding-bottom: $footerHeight + 101px;
+  flex-grow: 1;
+  overflow-y: hidden;
   position: relative;
 }

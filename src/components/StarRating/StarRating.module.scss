@@ -1,0 +1,12 @@
+@import 'styles/_var';
+
+.container {
+  @include flex($justify: flex-start);
+  @include childrenNotLastChild {
+    margin-right: 1px;
+  }
+}
+
+.star {
+  height: 12px;
+}

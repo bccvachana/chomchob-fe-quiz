@@ -1,11 +1,8 @@
 import { FC } from 'react';
-import { PageContainer } from 'components';
+import { PageContainer, ImgContainer, StarRating } from 'components';
 import { map } from 'lodash/fp';
 import { IProductDetail } from 'types/product';
 import { Link } from 'react-router-dom';
-import StarIcon from 'assets/images/star-icon.svg';
-import BlankStarIcon from 'assets/images/blank-star-icon.svg';
-import { mapWithIndex } from 'utils/common';
 import { useProductList } from './ProductListHooks';
 import styles from './ProductList.module.scss';
 
@@ -29,20 +26,18 @@ const ProductList: FC = () => {
           <Link
             to={`/product/${_id}`}
             className={styles.product}
+            key={_id}
           >
-            <div
+            <ImgContainer
+              src={image_url}
               className={styles.productImg}
-              style={{
-                backgroundImage: `url(${image_url})`,
-              }}
             />
             <div className={styles.productDetail}>
-              <div
+              <ImgContainer
+                src={brand_image_url}
                 className={styles.brandImg}
-                style={{
-                  backgroundImage: `url(${brand_image_url})`,
-                }}
               />
+
               <div className={styles.detail}>
                 <div className={styles.name}>{name}</div>
                 <div className={styles.priceReview}>
@@ -52,32 +47,10 @@ const ProductList: FC = () => {
                   </div>
                   <div>
                     {`Reviews (${number} reviews)`}
-                    <div className={styles.rating}>
-                      {mapWithIndex(
-                        (_: any, index: any) => (
-                          index < rating
-                            ? (
-                              <img
-                                className={styles.star}
-                                src={StarIcon}
-                                alt="star-icon"
-                              />
-                            ) : (
-                              <img
-                                className={styles.star}
-                                src={BlankStarIcon}
-                                alt="blank-star-icon"
-                              />
-                            )
-                        ),
-                        [...Array(5)],
-                      )}
-
-                    </div>
+                    <StarRating rating={rating} containerClassName={styles.rating} />
                   </div>
                 </div>
               </div>
-
             </div>
           </Link>
         ), productList)}

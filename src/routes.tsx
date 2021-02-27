@@ -1,4 +1,5 @@
 import {
+  Cart,
   ProductList,
   ProductDetail,
 } from 'pages';
@@ -14,6 +15,6 @@ export const routes = [
   },
   {
     path: '/cart',
-    PageComponent: () => <div>/cart</div>,
+    PageComponent: Cart,
   },
 ];
