@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  chomchob-fe-quiz:
+    build: '.'
+    image: 'chomchob-fe-quiz'
+    volumes:
+      - './src:/usr/src/app/src'
+      - './public:/usr/src/app/public'
+      - './package.json:/usr/src/app/package.json'
+    ports:
+      - '3030:3000'
