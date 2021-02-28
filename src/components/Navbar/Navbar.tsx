@@ -35,6 +35,7 @@ const Navbar: FC = () => {
           <Link to="/product" key={link}>
             {link}
           </Link>
+          // NOTE: mock links (go to '/product')
         ), links)}
       </div>
       <Link

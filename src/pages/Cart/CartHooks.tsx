@@ -61,6 +61,7 @@ export const useCart = (): IUseCartReturns => {
   const checkout: TNotReturnFunction = () => {
     clearCart();
     push('/product');
+    // NOTE: mock checkout process (clearCart + push to '/product')
   };
 
   return {

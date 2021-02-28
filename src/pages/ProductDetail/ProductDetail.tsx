@@ -54,7 +54,7 @@ const ProductDetail: FC = () => {
                 <div className={styles.notDiscountPrice}>
                   {
                     `฿${(toNumber(productDetail.price) + 500).toFixed(2)}`
-                    // NOTE: This is mock not-discount price (+ ฿500)
+                    // NOTE: mock not-discount price (+ ฿500)
                   }
                 </div>
               </div>

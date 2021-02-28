@@ -40,7 +40,7 @@ const Cart: FC = () => {
                 <div className={styles.price}>{`฿${productsDetail[productId].price}`}</div>
                 <div className={styles.quantity}>{productQuantity}</div>
                 <div className={styles.total}>
-                  {`฿${(toNumber(productsDetail[productId].price) * 2).toFixed(2)}`}
+                  {`฿${(toNumber(productsDetail[productId].price) * productQuantity).toFixed(2)}`}
                 </div>
               </>
             )}
@@ -60,7 +60,7 @@ const Cart: FC = () => {
           onClick={checkout}
           className={styles.checkOutButton}
         >
-          Proceed to Check out
+          PROCEED TO CHECK OUT
         </button>
       </div>
     </PageContainer>

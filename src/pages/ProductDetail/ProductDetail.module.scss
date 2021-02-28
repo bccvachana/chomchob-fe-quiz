@@ -25,7 +25,7 @@ $imgMarginRight: 25px;
 }
 
 .name {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-size: 28px;
   font-weight: 500;
   white-space: nowrap;
@@ -128,11 +128,11 @@ $imgMarginRight: 25px;
 }
 
 .addButton {
-  width: 206px;
+  width: 199px;
   height: 48px;
   background-color: $color-primary;
   color: $color-white;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 10px;
   @include flex;
 
